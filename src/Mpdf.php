@@ -21024,10 +21024,10 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 					} else {
 						$yadj2 = $Lw / 2 - $bsv / 2;
 					}
-					if (!$bSeparate && $details['mbw']['LT']) {
+					if (!$bSeparate && !empty($details['mbw']) && $details['mbw']['LT']) {
 						$yadj = ($Lw - $details['mbw']['LT']) / 2;
 					}
-					if (!$bSeparate && $details['mbw']['LB']) {
+					if (!$bSeparate && !empty($details['mbw']) &&  $details['mbw']['LB']) {
 						$yadj2 = ($Lw - $details['mbw']['LB']) / 2;
 					}
 					$print = true;
